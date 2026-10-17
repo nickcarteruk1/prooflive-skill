@@ -29,6 +29,10 @@ gemini extensions install https://github.com/nickcarteruk1/prooflive-skill
 
 Ask your agent: "Build my business a website with Prooflive". It will ask you to sign up free at [app.prooflive.ai](https://app.prooflive.ai/signup?utm_source=github&utm_medium=skill) and paste your build link, then follow the site's own instructions to ask about your business and build every page.
 
+## Data
+
+The skill tells your agent to send the website it builds (pages, images and the business details you give it, such as name, address and phone) to the Prooflive.ai build API at app.prooflive.ai, using the build link you create in your account. Prooflive.ai stores it to host your site for as long as your account and site exist. See the [privacy policy](https://prooflive.ai/privacy) and [terms](https://prooflive.ai/terms).
+
 ## Licence
 
 MIT
