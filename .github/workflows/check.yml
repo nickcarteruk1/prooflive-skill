@@ -1,0 +1,11 @@
+name: check
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Manifests are valid JSON
+        run: for f in .claude-plugin/plugin.json .claude-plugin/marketplace.json gemini-extension.json; do python3 -m json.tool "$f" > /dev/null; done
+      - name: Skill has name and description
+        run: head -5 skills/prooflive-website/SKILL.md | grep -q '^name: ' && head -5 skills/prooflive-website/SKILL.md | grep -q '^description: '
